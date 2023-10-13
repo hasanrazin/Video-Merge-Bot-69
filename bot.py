@@ -79,7 +79,7 @@ if os.path.exists("downloads") == False:
     os.makedirs("downloads")
 
 
-@mergeApp.on_message(filters.command(["log"]) & filters.user(MadflixOfficials))
+@mergeApp.on_message(filters.command(["log"]) & filters.user(Config.OWNER_USERNAME))
 async def sendLogFile(c: Client, m: Message):
     await m.reply_document(document="./mergebotlog.txt")
     return
@@ -147,7 +147,7 @@ async def stats_handler(c: Client, m: Message):
 @mergeApp.on_message(
     filters.command(["broadcast"])
     & filters.private
-    & filters.user(Config.OWNER)
+    & filters.user(Config.OWNER_USERNAME)
 )
 async def broadcast_handler(c: Client, m: Message):
     msg = m.reply_to_message
