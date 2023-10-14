@@ -43,7 +43,7 @@ if UPSTREAM_REPO is not None:
         subprocess.run(["rm", "-rf", ".git"])
 
     update = subprocess.run([f"git init -q \
-                     && git config --global user.email yashoswal18@gmail.com \
+                     && git config --global user.email jishusinha50@gmail.com \
                      && git config --global user.name mergebot \
                      && git add . \
                      && git commit -sm update -q \
