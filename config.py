@@ -7,6 +7,7 @@ class Config(object):
     TELEGRAM_API = os.environ["TELEGRAM_API"]
     OWNER = os.environ.get("OWNER")
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME")
+    USERNAME = os.environ.get("USERNAME")
     PASSWORD = os.environ.get("PASSWORD")
     DATABASE_URL = os.environ.get("DATABASE_URL")
     LOGCHANNEL = os.environ.get("LOGCHANNEL")  # Add channel id as -100 + Actual ID
