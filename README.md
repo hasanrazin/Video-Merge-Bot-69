@@ -24,7 +24,7 @@ Bugs should be reported at: [Telegram Group](https://t.me/Madflixbots_support)
 + Log Channel to store all merged videos
 
 ```
-## Deploy(at your own risk) :
+## Deploy :
 <p><a href="https://heroku.com/deploy?template=https://github.com/jishusinha/Video-Merge-Bot"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="200""/></a></p>
 
 ### OR
