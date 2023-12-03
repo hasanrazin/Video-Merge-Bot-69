@@ -148,7 +148,8 @@ async def callback_handler(c: Client, cb: CallbackQuery):
             await cb.message.edit(
                 "Current filename: **[@Madflix_Bots]_merged.mkv**\n\nSend me new file name without extension: You have 1 minute"
             )
-            res: Message = await c.listen(chat_id=cb.message.chat.id, filters=filters.text, listener_type=ListenerTypes.MESSAGE, timeout=120, user_id=cb.from_user.id
+            res: Message = await c.listen(
+                (cb.message.chat.id,None,None), filters=filters.text, timeout=150
             )
             if res.text:
                 new_file_name = f"downloads/{str(cb.from_user.id)}/{res.text}.mkv"
@@ -421,3 +422,4 @@ async def callback_handler(c: Client, cb: CallbackQuery):
                 await streamsExtractor(c,cb,media_mid,exAudios=True,exSubs=True)
         except Exception as e:
             LOGGER.error(e)
+        
